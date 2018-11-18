@@ -34,9 +34,9 @@
       </button>
     </div>
     <div *ngIf="loginService.loggedIn" class="navbar-nav w-100 justify-content-end">
-      <div class="nav-item nav-link">
+      <a class="nav-item nav-link" [routerLink]="'/progress'">
         {{loginService.information.name}}
-      </div>
+      </a>
       <button class="nav-item nav-link active btn tertiary-button" (click)="loginService.logOut()">
         Logout
       </button>

@@ -21,6 +21,8 @@ import { AboutComponent } from './about/about.component';
 import { TrainersComponent } from './trainers/trainers.component';
 import { PaymentComponent } from './payment/payment.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProgressService } from './shared/services/progress.service';
+import { ProgressComponent } from './progress/progress.component';
 
 @NgModule({
   imports: [
@@ -46,10 +48,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AlertsComponent,
     AboutComponent,
     TrainersComponent,
-    PaymentComponent
+    PaymentComponent,
+    ProgressComponent
   ],
   providers: [
     AlertService,
+    ProgressService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: HeaderInterceptor,

@@ -9,6 +9,7 @@ import {
   transition
   // ...
 } from '@angular/animations';
+import { ProgressService } from '../shared/services/progress.service';
 
 @Component({
   templateUrl: './events.component.html',
@@ -18,18 +19,18 @@ import {
       // ...
       state('open', style({
         'background-color': '#99B1b9',
-        'padding-bottom': '10px',
-        'margin-bottom': '30px',
+        'margin-bottom': '20px',
         'min-height': '350px'
       })),
       state('closed', style({
-        'height': '200px'
+        'height': '150px',
+        'margin-bottom': '20px',
       })),
       transition('open => closed', [
-        animate('0.2s')
+        animate('0.3s')
       ]),
       transition('closed => open', [
-        animate('0.2s')
+        animate('0.3s')
       ])
     ])
   ]
@@ -37,11 +38,13 @@ import {
 
 export class EventsComponent {
 
-  public constructor(private _alertService: AlertService) {
+  public constructor(private _alertService: AlertService,
+                     private _progressService: ProgressService) {
 
   }
 
   public events = [{
+    name: 'Effective altruism',
     expand: false,
     time: '12:00 - 15:00',
     image: 'broad-1',
@@ -51,6 +54,7 @@ export class EventsComponent {
       'But it\'s no use answering the question unless you act on it. Effective altruism is about following through. ' +
       'It\'s about being generous with your time and your money to do the most good you can.'
   }, {
+    name: 'Public speaking',
     expand: false,
     time: '10:00 - 13:00',
     image: 'broad-2',
@@ -60,6 +64,7 @@ export class EventsComponent {
       ' young, and have people telling them they are clever and attractive usually have more self-esteem than children who' +
       ' are often told they are stupid or ugly, or ignored.'
   }, {
+    name: 'Self esteem for effective communication',
     expand: false,
     time: '10:00 - 13:00',
     image: 'broad-3',
@@ -72,7 +77,8 @@ export class EventsComponent {
       'influence or entertain a group of listeners.'
   }];
 
-  public signUp() {
+  public signUp(event) {
+    this._progressService.signUp(event);
     this._alertService.sendSuccess(SuccessMessages.SignupCompleted);
   }
 }

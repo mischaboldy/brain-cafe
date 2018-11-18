@@ -7,16 +7,15 @@
         <div [class]="event.image">
           <button *ngIf="!event.expand" class="btn secondary-button show-more-button" (click)="event.expand = true">show more</button>
           <button *ngIf="event.expand" class="btn secondary-button show-more-button" (click)="event.expand = false">show less</button>
-          <button class="btn primary-button join-button" (click)="signUp()">join</button>
+          <button class="btn primary-button join-button" (click)="signUp(event)">join</button>
         </div>
       </div>
-
     </div>
     <div class="row info" [hidden]="!event.expand">
       <div class="col-8 ">
       {{event.text}}
       </div>
-      <div class="col-3 offset-1">
+      <div class="col-3 offset-1 left-border">
         Venue: {{event.venue}}<br/>
         {{event.time}}
       </div>

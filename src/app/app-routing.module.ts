@@ -8,6 +8,7 @@ import { EventsComponent } from './events/events.component';
 import { AboutComponent } from './about/about.component';
 import { TrainersComponent } from './trainers/trainers.component';
 import { PaymentComponent } from './payment/payment.component';
+import { ProgressComponent } from './progress/progress.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'events', component: EventsComponent},
   {path: 'about', component: AboutComponent},
   {path: 'payment', component: PaymentComponent},
+  {path: 'progress', component: ProgressComponent},
   {path: 'trainers', component: TrainersComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},

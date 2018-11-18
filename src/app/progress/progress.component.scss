@@ -1,0 +1,25 @@
+@import '../../styles/constants.scss';
+
+.progress {
+  height: 50px;
+  border-radius: 25px;
+}
+
+.sub-text {
+  position: relative;
+  left: 35px;
+  width: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  color: black;
+}
+
+.text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 25px;
+  color: black;
+  margin-bottom: 50px;
+}

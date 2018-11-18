@@ -1,6 +1,6 @@
 <div class="notification-position">
   <div *ngFor="let message of alertService.messages" [ngClass]="getAlertClass(message.type)">
-    <strong>{{ message.type }}!</strong> {{ message.content }}
+    {{ message.content }}
     <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="alertService.removeMessage(message)">
       <span aria-hidden="true">&times;</span>
     </button>
