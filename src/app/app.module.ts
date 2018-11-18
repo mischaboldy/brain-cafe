@@ -20,6 +20,7 @@ import { AlertsComponent } from './shared/components/alerts/alerts.component';
 import { AboutComponent } from './about/about.component';
 import { TrainersComponent } from './trainers/trainers.component';
 import { PaymentComponent } from './payment/payment.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   imports: [
@@ -30,7 +31,8 @@ import { PaymentComponent } from './payment/payment.component';
     FormsModule,
     ReactiveFormsModule,
     AngularFontAwesomeModule,
-    SharedModule.forRoot()
+    SharedModule.forRoot(),
+    BrowserAnimationsModule
   ],
   declarations: [
     AppComponent,

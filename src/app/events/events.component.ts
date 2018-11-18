@@ -1,10 +1,38 @@
 import { Component } from '@angular/core';
 import { AlertService } from '../shared/services/alert.service';
 import { SuccessMessages } from '../shared/enums/messages/success-messages.enum';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition
+  // ...
+} from '@angular/animations';
 
 @Component({
   templateUrl: './events.component.html',
-  styleUrls: ['./events.component.scss']
+  styleUrls: ['./events.component.scss'],
+  animations: [
+    trigger('openClose', [
+      // ...
+      state('open', style({
+        'background-color': '#99B1b9',
+        'padding-bottom': '10px',
+        'margin-bottom': '30px',
+        'min-height': '350px'
+      })),
+      state('closed', style({
+        'height': '200px'
+      })),
+      transition('open => closed', [
+        animate('0.2s')
+      ]),
+      transition('closed => open', [
+        animate('0.2s')
+      ])
+    ])
+  ]
 })
 
 export class EventsComponent {

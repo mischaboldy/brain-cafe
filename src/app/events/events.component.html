@@ -1,6 +1,6 @@
 <div class="top-row">
   <div *ngFor="let event of events">
-    <div [class.blue]="event.expand">
+    <div [@openClose]="event.expand ? 'open' : 'closed'" class="open-close-container">
 
     <div class="row event-row">
       <div class="col-10 offset-1 text-align-center image">
@@ -12,7 +12,7 @@
       </div>
 
     </div>
-    <div class="row info" *ngIf="event.expand">
+    <div class="row info" [hidden]="!event.expand">
       <div class="col-8 ">
       {{event.text}}
       </div>
