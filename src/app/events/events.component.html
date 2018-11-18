@@ -1,10 +1,31 @@
 <div class="top-row">
-  <div *ngFor="let event of events" class="row event-row">
-    <div class="col-10 offset-1 text-align-center image">
-      <div [class]="event.image">
-        <button class="btn secondary-button show-more-button" (click)="signUp()">show more</button>
-        <button class="btn primary-button join-button" (click)="signUp()">join</button>
+  <div *ngFor="let event of events">
+    <div [class.blue]="event.expand">
+
+    <div class="row event-row">
+      <div class="col-10 offset-1 text-align-center image">
+        <div [class]="event.image">
+          <button *ngIf="!event.expand" class="btn secondary-button show-more-button" (click)="event.expand = true">show more</button>
+          <button *ngIf="event.expand" class="btn secondary-button show-more-button" (click)="event.expand = false">show less</button>
+          <button class="btn primary-button join-button" (click)="signUp()">join</button>
+        </div>
+      </div>
+
+    </div>
+    <div class="row info" *ngIf="event.expand">
+      <div class="col-8 ">
+
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+      aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+      sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+      <div class="col-3 offset-1">
+        Venue: {{event.venue}}<br/>
+        {{event.time}}
       </div>
     </div>
+    </div>
   </div>
+
 </div>

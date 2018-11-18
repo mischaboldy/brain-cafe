@@ -14,20 +14,20 @@ export class EventsComponent {
   }
 
   public events = [{
-    name: '',
-    text: '',
+    expand: false,
+    time: '12:00 - 15:00',
     image: 'broad-1',
-    imageSuccess: ''
+    venue: 'LC, Groningen'
   }, {
-    name: '',
-    text: '',
+    expand: false,
+    time: '10:00 - 13:00',
     image: 'broad-2',
-    imageSuccess: 'http://info.shine.com/media/images/228/3228/Young-Professional-_large.jpg'
+    venue: 'LC, Groningen'
   }, {
-    name: '',
-    text: '',
+    expand: false,
+    time: '10:00 - 13:00',
     image: 'broad-3',
-    imageSuccess: 'http://info.shine.com/media/images/228/3228/Young-Professional-_large.jpg'
+    venue: 'LC, Groningen'
   }];
 
   public signUp() {

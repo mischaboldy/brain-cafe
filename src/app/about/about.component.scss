@@ -1,8 +1,9 @@
 @import '../../styles/constants';
 
 .us {
-  border-radius: 10px;
+  margin: 0 auto;
+  border-radius: 30px;
   background: url('../../assets/us.jpg') 50% 50% no-repeat; /* 50% 50% centers image in div */
-  width: 100%;
-  min-height: 600px;
+  width: 667px;
+  height: 500px;
 }
