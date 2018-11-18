@@ -18,6 +18,8 @@ import { EventsComponent } from './events/events.component';
 import { AlertService } from './shared/services/alert.service';
 import { AlertsComponent } from './shared/components/alerts/alerts.component';
 import { AboutComponent } from './about/about.component';
+import { TrainersComponent } from './trainers/trainers.component';
+import { PaymentComponent } from './payment/payment.component';
 
 @NgModule({
   imports: [
@@ -40,7 +42,9 @@ import { AboutComponent } from './about/about.component';
     EventsComponent,
     RegistrationComponent,
     AlertsComponent,
-    AboutComponent
+    AboutComponent,
+    TrainersComponent,
+    PaymentComponent
   ],
   providers: [
     AlertService,

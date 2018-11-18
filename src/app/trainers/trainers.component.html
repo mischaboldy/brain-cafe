@@ -1,0 +1,26 @@
+<div class="top-row">
+  <h1 class="text-align-center margin-bottom">
+    Some of our trainers
+  </h1>
+  <div *ngFor="let trainer of trainers; let index = index">
+
+    <div *ngIf="index %2 === 0" class="row trainer-row">
+      <div class="col-3">
+        <img [src]="trainer.image">
+      </div>
+      <div class="col-9 text">
+        {{trainer.text}}
+      </div>
+    </div>
+
+    <div *ngIf="index %2 !== 0" class="row trainer-row">
+      <div class="col-9 text">
+        {{trainer.text}}
+      </div>
+      <div class="col-3 text-align-right">
+        <img [src]="trainer.image">
+      </div>
+    </div>
+  </div>
+
+</div>

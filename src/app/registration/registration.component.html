@@ -41,6 +41,11 @@
   </ng-container>
 </form>
 <div class="row">
+  <div class="col-5 offset-5 text-align-right margin-bottom">
+    <a [routerLink]="'/payment'">payment info</a>
+  </div>
+</div>
+<div class="row">
   <div class="col-10 text-align-right">
     <button class="btn secondary-button margin-right" (click)="backWithoutRegister()">Cancel</button>
     <button class="btn primary-button" (click)="register()">Register</button>
