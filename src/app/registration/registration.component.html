@@ -1,0 +1,48 @@
+<form [formGroup]="registrationFormGroup" novalidate>
+  <ng-container *ngIf="registrationFormGroup.get('name'); let formGroup">
+    <div class="form-group row form-bottom-margin form-top-margin">
+      <label class="col-5 col-form-label text-align-right">What's your name?</label>
+      <div class="col-5">
+        <input id="form-application-environment" class="form-control" type="text" formControlName="name">
+      </div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="registrationFormGroup.get('email'); let formGroup">
+    <div class="form-group row form-bottom-margin">
+      <label class="col-5 col-form-label text-align-right">On which email can we contact you?</label>
+      <div class="col-5">
+        <input id="form-hosting-environment" class="form-control" type="text" formControlName="email">
+      </div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="registrationFormGroup.get('skills'); let formGroup">
+    <div class="form-group row form-bottom-margin">
+      <label class="col-5 col-form-label text-align-right">Tell us the skills you want to improve on:</label>
+      <div class="col-5">
+        <input id="form-functionality" class="form-control" type="text" formControlName="skills">
+      </div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="registrationFormGroup.get('password'); let formGroup">
+    <div class="form-group row form-bottom-margin">
+      <label class="col-5 col-form-label text-align-right">Lastly, your password</label>
+      <div class="col-5">
+        <input id="form-operating-system" class="form-control" type="password" formControlName="password">
+      </div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="registrationFormGroup.get('passwordRepeat'); let formGroup">
+    <div class="form-group row form-bottom-margin">
+      <label class="col-5 col-form-label text-align-right">Pleas repeat your password</label>
+      <div class="col-5">
+        <input id="form-asset-name" class="form-control" type="password" formControlName="passwordRepeat">
+      </div>
+    </div>
+  </ng-container>
+</form>
+<div class="row">
+  <div class="col-10 text-align-right">
+    <button class="btn secondary-button margin-right" (click)="backWithoutRegister()">Cancel</button>
+    <button class="btn primary-button" (click)="register()">Register</button>
+  </div>
+</div>

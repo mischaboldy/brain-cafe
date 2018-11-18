@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'constants';
+@import 'buttons';
+@import 'tables';
+@import 'navbar';
+@import 'modal';
+@import 'searchbox';
+@import 'forms';
+@import 'header';
+
+.text-align-center {
+    text-align: center;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+.margin-bottom {
+    margin-bottom: 20px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.margin-right {
+    margin-right: 20px
+}
+
+.margin-left {
+    margin-left: 20px
+}
+
+.top-row {
+  margin-top: 40px;
+}

@@ -1,0 +1,46 @@
+.modal-content {
+    margin-top: 100px;
+
+    .modal-title {
+        border: none;
+    }
+
+    .modal-header {
+        background-color: $themeColorOne;
+        color: $colorWhite;
+        border-top-left-radius: .2rem;
+        border-top-right-radius: .2rem;
+        padding: 10px;
+    }
+
+    .close {
+        text-shadow: none;
+        color: $colorWhite;
+        opacity: 1;
+        font-size: 22pt;
+
+        &:hover {
+            color: $colorDarkGray;
+        }
+    }
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.modal-size-sm .modal-dialog {
+    max-width: 30%;
+}
+
+.modal-size-md .modal-dialog {
+    max-width: 40%;
+}
+
+.modal-size-lg .modal-dialog {
+    max-width: 60%;
+}
+
+.modal-size-xl .modal-dialog {
+    max-width: 80%;
+}

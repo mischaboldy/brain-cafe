@@ -1,0 +1,10 @@
+<div class="top-row">
+  <div *ngFor="let event of events" class="row event-row">
+    <div class="col-10 offset-1 text-align-center image">
+      <div [class]="event.image">
+        <button class="btn secondary-button show-more-button" (click)="signUp()">show more</button>
+        <button class="btn primary-button join-button" (click)="signUp()">join</button>
+      </div>
+    </div>
+  </div>
+</div>

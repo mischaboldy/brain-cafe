@@ -1,0 +1,35 @@
+@import '../../styles/constants.scss';
+
+.login-box {
+  margin-top: 150px;
+  min-width: 400px;
+  max-width: 400px;
+}
+
+.ibm-image {
+  width: 200px;
+}
+
+span {
+  display: block;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.input-field {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 5px;
+}
+
+small {
+  &:hover {
+    cursor: pointer;
+    color: $colorRed;
+    text-decoration: underline;
+  }
+}
+
+.submit-button {
+  margin-left: 270px;
+}

@@ -1,0 +1,43 @@
+@import '../../styles/constants';
+
+.image {
+  border-radius: 25px;
+}
+
+.event-row {
+  margin-bottom: 40px;
+}
+
+
+.broad-1 {
+  border-radius: 10px;
+  background: url('../../assets/broad-1.png') 50% 50% no-repeat; /* 50% 50% centers image in div */
+  width: 100%;
+  min-height: 150px;
+}
+
+.broad-2 {
+  border-radius: 10px;
+  background: url('../../assets/broad-2.png') 50% 50% no-repeat; /* 50% 50% centers image in div */
+  width: 100%;
+  min-height: 150px;
+}
+
+.broad-3 {
+  border-radius: 10px;
+  background: url('../../assets/broad-3.png') 50% 50% no-repeat; /* 50% 50% centers image in div */
+  width: 100%;
+  min-height: 150px;
+}
+
+.join-button{
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+}
+
+.show-more-button{
+  position: absolute;
+  right: 120px;
+  bottom: -20px;
+}

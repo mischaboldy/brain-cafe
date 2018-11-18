@@ -1,0 +1,28 @@
+<div class="row top-row">
+  <div *ngFor="let event of events" class="col-4">
+    <div class="event" [class]="'event ' + event.image"></div>
+  </div>
+</div>
+<div class="row middle-row">
+  <div class="col-4  offset-4 text-align-center">
+    Start working on your personal development
+  </div>
+</div>
+<div class="row button-row">
+  <div class="col-4  offset-4 text-align-center">
+
+    <button *ngIf="!loginService.loggedIn" class="btn primary-button" [routerLink]="['/register']">Join
+    </button>
+    <button *ngIf="loginService.loggedIn" class="btn primary-button" [routerLink]="['/events']">Join
+    </button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-8 bottom-row offset-2 text-align-center">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div>
+</div>

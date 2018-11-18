@@ -1,0 +1,45 @@
+<nav class="navbar center navbar-expand-lg">
+  <div class="col-2 offset-3">
+
+    <div class="collapse navbar-collapse">
+      <div class="navbar-nav center">
+        <a class="nav-item nav-link" routerLinkActive="home" routerLink="/home">Home</a>
+        <a class="nav-item nav-link" routerLinkActive="events" routerLink="/events">Events</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-2">
+    <div class="collapse navbar-collapse">
+      <div class="navbar-nav center">
+        <img class="logo" [src]="'/assets/logo.png'">
+      </div>
+    </div>
+  </div>
+  <div class="col-2">
+    <div class="collapse navbar-collapse">
+      <div class="navbar-nav center">
+        <a class="nav-item nav-link" routerLinkActive="events" routerLink="/about">About us</a>
+        <a class="nav-item nav-link" routerLinkActive="events" routerLink="/payment">Payment</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-2 offset-1">
+    <div *ngIf="!loginService.loggedIn" class="navbar-nav w-100 justify-content-end">
+      <button class="nav-item nav-link active btn secondary-button" [routerLink]="['/login']">
+        Sign in
+      </button>
+      <button class="nav-item nav-link active btn primary-button" [routerLink]="['/register']">
+        Register
+      </button>
+    </div>
+    <div *ngIf="loginService.loggedIn" class="navbar-nav w-100 justify-content-end">
+      <div class="nav-item nav-link">
+        {{loginService.information.name}}
+      </div>
+      <button class="nav-item nav-link active btn tertiary-button" (click)="loginService.logOut()">
+        Logout
+      </button>
+    </div>
+  </div>
+</nav>

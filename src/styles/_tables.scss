@@ -1,0 +1,132 @@
+.table {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+
+  th:first-child {
+    border-radius: 6px 0 0 0;
+  }
+
+  th:last-child {
+    border-radius: 0 6px 0 0;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  TH {
+    font-weight: bold;
+    border-top: none;
+  }
+
+  th:first-child, td:first-child {
+    padding-left: 15px;
+  }
+  th:last-child, td:last-child {
+    padding-right: 15px;
+  }
+
+  &.table-hover {
+    tbody > TR:hover {
+      cursor: pointer;
+      background-color: $colorDarkGray;
+    }
+  }
+
+  tr:nth-child(even) { /*(even) or (2n 0)*/
+    background: $colorLightGray;
+  }
+
+  tr:nth-child(odd) { /*(odd) or (2n 1)*/
+    background: $colorWhite;
+  }
+
+  thead > tr > th {
+    border-top: none;
+    border-bottom: 1px solid $colorBlack;
+    background-color: $themeColorOne;
+    color: $colorWhite;
+  }
+
+  tbody > tr > td {
+    padding: 0 0 8px 15px;
+    vertical-align: bottom;
+    border-top: none;
+    border-bottom: 1px solid $colorBlack;
+
+    &.image-column {
+      text-align: right;
+      width: 50px;
+      padding: 5px 15px;
+      .icon:hover {
+        color: $colorDarkGray;
+      }
+    }
+
+    &.double-image-column {
+      text-align: right;
+      width: 125px;
+      padding: 5px 15px;
+
+      .icon:hover {
+        color: $colorDarkGray;
+      }
+    }
+
+  }
+
+  tr {
+    height: 45px;
+    vertical-align: bottom;
+    td {
+      border-collapse: separate;
+      border-spacing: 15px;
+    }
+  }
+}
+
+.select-table {
+  width: 100%;
+
+  thead {
+    display: table-header-group;
+  }
+
+  TH {
+    font-weight: bold;
+    border-top: none;
+  }
+
+  tr:nth-child(even) { /*(even) or (2n 0)*/
+    background: $colorLightGray;
+  }
+
+  tr:nth-child(odd) { /*(odd) or (2n 1)*/
+    background: $colorWhite;
+  }
+
+  &.table-hover {
+    tbody > TR:hover {
+      cursor: pointer;
+      background-color: $colorDarkGray;
+    }
+  }
+
+  thead > tr > th {
+    border-top: none;
+    border-bottom: 1px solid $colorBlack;
+  }
+
+  tbody > tr > td {
+    vertical-align: bottom;
+    border-top: none;
+  }
+
+  tr {
+    height: 30px;
+    vertical-align: bottom;
+    td {
+      border-collapse: separate;
+      border-spacing: 15px;
+    }
+  }
+}

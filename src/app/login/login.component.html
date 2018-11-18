@@ -1,0 +1,23 @@
+<div class="top-row">
+  <form novalidate>
+    <div class="form-group row">
+      <label class="col-4 offset-4 col-form-label">Email address</label>
+      <div class="col-4 offset-4">
+        <input [(ngModel)]="email" name="email" id="form-application-environment" class="form-control" type="text">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-4 offset-4 col-form-label">password</label>
+      <div class="col-4 offset-4">
+        <input id="form-hosting-environment" class="form-control" type="password">
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="row">
+  <div class="col-4 offset-4 text-align-right">
+    <button class="btn tertiary-button margin-right" (click)="backWithoutRegister()">Cancel</button>
+    <button class="btn primary-button" (click)="login()">Login</button>
+  </div>
+</div>

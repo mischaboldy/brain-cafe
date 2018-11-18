@@ -1,0 +1,48 @@
+.btn {
+  font-size: $button-font-size;
+  font-weight: $button-font-weight;
+  text-decoration: none;
+  min-width: 100px;
+  height: 35px;
+  border: none;
+
+  &:hover {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &.primary-button {
+    border-radius: 25px;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.20);
+    margin-bottom: 3px;
+    background-color: $colorYellow;
+
+    &:hover {
+      background-color: $colorYellowHighlight;
+    }
+  }
+
+  &.secondary-button {
+    border-radius: 25px;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.20);
+    margin-bottom: 3px;
+    background-color: $colorBlue;
+    color: $colorWhite !important;
+
+    &:hover {
+      background-color: $colorLightBlue;
+    }
+  }
+
+  &.tertiary-button{
+    border-radius: 25px;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.20);
+    margin-bottom: 3px;
+    background-color: $colorDarkGray;
+
+    &:hover {
+      background-color: $colorLightGray;
+    }
+  }
+
+}
